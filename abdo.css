@@ -1,0 +1,332 @@
+:root{
+    --main : #181a1b;
+    --second : #494f52;
+}
+*{
+    box-sizing: border-box
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 3000px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.top .nav{
+    position: fixed;
+    height: 50px;
+    display: flex;
+    width: 100%;
+    z-index: 1;
+    background-color: transparent;
+}
+.top .nav div{
+    display: flex;
+    height: fit-content;
+    flex-direction: row;
+    width: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition-duration: .1s;
+}
+.top .nav  a{
+    text-decoration: none;
+    color : black;
+    opacity: .5;
+}
+.top .nav a:hover{
+    background-color: #494f52;
+    color : white;
+    opacity: 1;
+}
+.top .background{
+    width:auto;
+    z-index: 0;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top .background img{
+    height: 400px;
+    width: 90%;
+}
+.top .background p{
+    position : absolute;
+    font-size: 3vw;
+    padding: 10px;
+    background-color: #f1f1f1a3;
+}
+.main{
+    margin-top: -60px;
+    width: 100%;
+    animation: animateBg 9s linear infinite;
+    background-image: linear-gradient(90deg,#1f231f,#3e3d3d,#343233,#1f231f,#3e3d3d);
+    background-size: 400% 100%;
+}
+
+@keyframes animateBg {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 0%; }
+}
+
+.main .one{
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    color: #9d9488;
+    margin-top: 60px;
+}
+.main .two{
+    background-color: rgba(0, 0, 0, 0.311);
+    text-align: center;
+    font-size: 20px;
+    width: 60%;
+    font-family: "Alef", sans-serif;
+    color: #919ca0;
+    padding: 15px;
+    margin : 20px auto;
+}
+.main .about-me {
+    display: flex;
+    width: 100%;;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+}
+.main .about-me p , .main .about-me img{
+    width: 100%;
+    height: 100%;
+}
+.main .about-me img{
+    object-fit: contain;
+}
+.main .about-me .one{
+    width: 40%;
+    height: 50%;
+    margin-left: 5px;
+}
+.main .about-me .two {
+    text-align: center;
+    font-size: 20px;
+    width: 50%;
+    font-family: "Alef", sans-serif;
+    color: #919ca0;
+    padding: 15px;
+}
+.main .myPic{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 80%;
+    height: 500px;
+}
+.main .myPic img{
+    object-fit: contain;
+    width: 300px;
+    height: 400px;
+    filter: brightness(.7);
+}
+.main .myPic img:hover{
+    filter: brightness(1);
+}
+.main .myPic p{
+    font-size: 1.5vw;
+    width: 50%;
+    font-family: "Kanit", sans-serif;
+    color: #919ca0;
+    padding: 10px;
+}
+.good{
+    font-size: 30px;
+    text-align: center;
+    color:#616466;
+}
+.im-good-at{
+    margin: 0 auto;
+    width: 80%;
+    height: 500px;    
+}
+.im-good-at .i , .im-good-at .ii , .im-good-at .iii , .im-good-at .iv{
+    margin: 20px auto;
+    width: 80%;
+}
+.im-good-at p{
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: #919ca0;
+}
+.js , .cpp , .java , .css{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #202324;
+}
+.js::before , .cpp::before , .java::before , .css::before{
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    width: 50%;
+    background-color: #494f52;
+    color: rgba(255, 255, 255, 0.653);
+}
+.js::before{
+    content: "65%";
+    width: 65%;
+}
+.cpp::before{
+    content: "80%";
+    width: 80%;
+}
+.java::before {
+    content: "50%";
+    width: 50%;
+}
+.css::before {
+    content: "70%";
+    width: 70%;
+}
+.projects{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #494f52;
+    box-sizing: content-box;
+}
+.projects div{
+    color: rgba(255, 255, 255, 0.399);
+    width: 25%;
+    height: 100%;
+    text-align: center;
+}
+.projects div h1{
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.portfolio-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+}
+.portfolio-pic img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.portfolio-pic p{
+    position: absolute;
+    color: #919ca0;
+    z-index: 2;
+    letter-spacing: 10px;
+    font-size: 3vw;
+}
+.my-work{
+    background-color: var(--main);
+    color : rgba(255, 255, 255, 0.533);
+    text-align: center;
+    width: 100%;
+    height: 650px;
+}
+.my-work h1{
+    margin: 0;
+    padding-top: 100px;
+}
+.my-work .images{
+    width: 75%;
+    height: 350px;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.my-work .images img{
+    object-fit: fill;
+    margin: 10px;
+    width: calc(100%/4.5);
+    height: calc(100%/2);
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+}
+.contact img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contact p{
+    position: absolute;
+    color: #919ca0;
+    z-index: 2;
+    letter-spacing: 10px;
+    font-size: 3vw;
+}
+.info{
+    display: flex;
+    background-color: var(--main);
+    color: rgba(249, 242, 242, 0.662);
+    font-size: 40px;
+    height: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.info div{
+    margin-top: 40px;
+    text-align: center;
+    height: fit-content;
+    width: 100%;
+}
+.btn{
+    margin-top: 50px;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 23px;
+    padding: 12px;
+    cursor: pointer;
+    background-color: #36383a;
+    border: none;
+    color: white;
+}
+.btn:hover{
+    background-color: #575d60;
+}
+@media (max-width : 800px){
+    .top .nav div{
+        padding: 13px;
+    }
+    .main .myPic{
+        flex-direction: column-reverse;
+        height: 700px;
+    }
+    .main .myPic p {
+        font-size: 3vw;
+        width: 80%;
+    }
+    .main .myPic img{
+        width: 350px;
+        height: 400px;
+    }
+    .my-work{
+        height: 1900px;
+    }
+    .my-work .images img{
+        margin-top: 10px;
+        width: 95%;
+    }
+}
