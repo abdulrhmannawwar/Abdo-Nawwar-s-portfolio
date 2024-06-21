@@ -329,4 +329,10 @@ body{
         margin-top: 10px;
         width: 95%;
     }
+    .main .two{
+        width: 80%;
+    }
+    .info{
+        font-size: 20px;
+    }
 }
